@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <header>
+            <a href="#" class="logo"><img src="img/logo.png" alt="logo"></a>
+            <ul class="nav">
+                <li><a href="#">Home</a> </li>
+                <li><a href="#">Tv Shows</a> </li>
+                <li><a href="#">Movies</a> </li>
+                <li><a href="#">Latest</a> </li>
+                <li><a href="#">My List</a> </li>
+            </ul>
+            <div class="search">
+               
+                <input type="text" placeholder="Search">
+                <button class="btn-s"><span class="material-icons">search</span></button>
+
+                
+            </div> 
+        </header>
+        <section class="banner">
+            <img class="bg" src="img/tms.jpg" alt="personaje">
+            <spam class="sombraImg"></spam>
+            <div class="content">
+                <img class="movieTitle" src="img/logoletras.png" alt="">
+                <h4>
+                    <span>2022</span>
+                    <span><i>+16</i></span>
+                    <span>6 Temporadas</span>
+                    <span>Series</span>
+                </h4>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet tempore libero nobis eius modi vitae. Asperiores error rerum, voluptas reprehenderit soluta veritatis nisi? Similique, quod labore. Doloribus voluptatibus omnis tempora?
+                </p>
+                <div class="buttoms">
+                    <a href="#">Play</a>
+                    <a href="#">My List</a>
+                </div>
+            </div>
+            <a href="#" class="play" onclick="toggVideo();"><img src="img/play.png" alt="play">Watch Trailer</a>
+
+        </section>
+        <section class="trailer">
+            <video src="img/trailer.mp4" controls="true"></video>
+            <img class="close" onclick="toggVideo();" src="img/close.png" alt="">
+        </section>
+        <footer>
+            <div class="footer-content">
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+                <p class="footer-text">© 2024 Your Company. All rights reserved.</p>
+            </div>
+            
+        </footer>
+    </main>
+    <script>
+        function toggVideo(){
+            const trailer= document.querySelector(".trailer");
+            const video = document.querySelector("video");
+            trailer.classList.toggle("active");
+            video.currentTime=0;
+            video.pause();
+        }
+    </script>
+    <script>
+        // Añade la clase 'loaded' al body cuando la página ha terminado de cargar
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+    </script>
+    
+</body>
+</html>
